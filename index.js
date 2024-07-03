@@ -1,12 +1,23 @@
+('use strict');
 const Device = require('./Device');
 
 let Service, Characteristic;
 
-('use strict');
+const formatUUID = (uuid) => {
+  let formattedUUID = '';
+  for (let i = 0; i < uuid.length; i += 2) {
+    if (i > 0) {
+      formattedUUID += ':';
+    }
+    formattedUUID += uuid.slice(i, i + 2);
+  }
+  return formattedUUID.toUpperCase();
+}
+
 module.exports = function (homebridge) {
   Service = homebridge.hap.Service;
   Characteristic = homebridge.hap.Characteristic;
-  homebridge.registerAccessory('@lyliya/homebridge-ledstrip-ble', 'LedStrip', LedStrip);
+  homebridge.registerAccessory('homebridge-daybetter', 'Daybetter', LedStrip);
 };
 
 function LedStrip(log, config, api) {
@@ -40,7 +51,7 @@ function LedStrip(log, config, api) {
 
   this.log('Device UUID:', this.uuid);
 
-  this.device = new Device(this.uuid);
+  this.device = new Device(this.uuid, this.log);
 }
 
 LedStrip.prototype = {
@@ -48,7 +59,9 @@ LedStrip.prototype = {
     if (!this.bulb) return [];
     this.log('Homekit asked to report service');
     const infoService = new Service.AccessoryInformation();
-    infoService.setCharacteristic(Characteristic.Manufacturer, 'LedStrip');
+    infoService.setCharacteristic(Characteristic.Manufacturer, 'Daybetter');
+    infoService.setCharacteristic(Characteristic.Model, 'RGB LED Strip');
+    infoService.setCharacteristic(Characteristic.SerialNumber, formatUUID(this.uuid));
     return [infoService, this.bulb];
   },
   getPower: function (callback) {
