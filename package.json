@@ -1,14 +1,16 @@
 {
-    "name": "@lyliya/homebridge-ledstrip-ble",
-    "version": "1.5.1",
-    "displayName": "Homebridge Ledstrip BLE",
+    "name": "homebridge-daybetter",
+    "version": "1.5.5",
+    "displayName": "Homebridge Daybetter BLE",
     "description": "",
     "main": "index.js",
     "dependencies": {
         "@abandonware/noble": "^1.9.2-15"
     },
     "keywords": [
-        "homebridge-plugin"
+        "homebridge-plugin",
+        "ble",
+        "daybetter"
     ],
     "engines": {
         "node": ">=12.13.0",
@@ -19,12 +21,12 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Lyliya/homebridge-ledstrip-ble.git"
+        "url": "git+https://github.com/shindekokoro/homebridge-daybetter"
     },
-    "author": "",
+    "author": "shindekokoro",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/Lyliya/homebridge-ledstrip-ble/issues"
+        "url": "https://github.com/shindekokoro/homebridge-daybetter/issues"
     },
-    "homepage": "https://github.com/Lyliya/homebridge-ledstrip-ble#readme"
+    "homepage": "https://github.com/shindekokoro/homebridge-daybetter#readme"
 }
