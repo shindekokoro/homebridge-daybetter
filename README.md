@@ -1,9 +1,5 @@
-# homebridge-ledstrip-ble
-
-> [!WARNING]  
-> This plugin is no longer maintained as I now use HomeAssistant, feel free to open issue if needed, but I can't garantee fixing stuffs
-
-This plugin let you control RGB ledstrips using this kind of [12V BLE RGB LED strip controller](https://www.aliexpress.com/item/4000208329326.html) module.
+# homebridge-daybetter
+This plugin lets you control RGB ledstrips using Amazon DayBetter LED strip lights
 
 Control On/Off, Hue, Saturation and Brightness
 
@@ -14,12 +10,12 @@ To run without root access, go to homebridge terminal and type ```sudo setcap ca
 
 ## Installation
 
-`npm i @lyliya/homebridge-ledstrip-ble`
+`npm i homebridge-daybetter`
 
 ## Configuration
 ```js
 {
-    "accessory": "LedStrip", // Dont change
+    "accessory": "Daybetter", // Dont change
     "name": "LED", // Accessory name
     "uuid": "be320202f8e8" // BLE device UUID
 }
