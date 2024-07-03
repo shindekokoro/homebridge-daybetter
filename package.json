@@ -1,8 +1,8 @@
 {
     "name": "homebridge-daybetter",
-    "version": "1.5.5",
+    "version": "1.5.6",
     "displayName": "Homebridge Daybetter BLE",
-    "description": "",
+    "description": "Daybetter BLE LED Strip controls for HomeBridge and HomeKit",
     "main": "index.js",
     "dependencies": {
         "@abandonware/noble": "^1.9.2-15"
@@ -21,12 +21,13 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/shindekokoro/homebridge-daybetter"
+        "url": "git+https://github.com/shindekokoro/homebridge-daybetter.git"
     },
     "author": "shindekokoro",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/shindekokoro/homebridge-daybetter/issues"
     },
-    "homepage": "https://github.com/shindekokoro/homebridge-daybetter#readme"
+    "homepage": "https://www.npmjs.com/package/homebridge-daybetter",
+    "devDependencies": {}
 }
